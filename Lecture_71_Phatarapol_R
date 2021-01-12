@@ -1,0 +1,25 @@
+menuList = []
+PriceList = []
+while True:
+    menuName = input("Enter Your Menu:")
+    if menuName.lower() == 'exit':
+        break
+    else:
+        menuPrice = input("Enter Your Price:")
+        menuList.append(menuName)
+        PriceList.append(menuPrice)
+
+
+def showbill():
+    print("-"*12 + "MyFood" + "-"*12)
+    for food in range(len(menuList)):
+        print(menuList[food] + ":" + PriceList[food] + "บาท")
+
+def total():
+    Price = 0
+    for r in range(len(PriceList)):
+        Price += int(PriceList[r])
+    print("Total =", Price)
+
+showbill()
+total()
