@@ -1,6 +1,6 @@
 from tkinter import *
 import math
-Fat = []
+
 def BMItotal(event):
     x = int((float(textBoxWeight.get()) / math.pow(float(textBoxHeight.get())/100, 2)))
     if x >= 30:
